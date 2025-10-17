@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>FrontServlet</servlet-name>
-        <servlet-class>fw.FrontServlet</servlet-class>
+        <servlet-class>myframework.fw.FrontServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
