@@ -43,7 +43,7 @@ if exist %RESOURCES% (
     echo Attention: le dossier de ressources %RESOURCES% n'existe pas!
 )
 
-rem === Copie des libs dans WEB-INF/lib ===
+rem === Copie des libs dans WEB-INF/lib = ==
 echo Copie des bibliothèques...
 if not exist %OUT%\WEB-INF\lib mkdir %OUT%\WEB-INF\lib
 xcopy /Y %LIB%\*.jar %OUT%\WEB-INF\lib\
