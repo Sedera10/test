@@ -1,7 +1,21 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
 <html>
-<head><title>Bonjour</title></head>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Page</title>
+</head>
 <body>
-    <h2>Redirection dans ce page en succées</h2>
+    <h1>${message}</h1>
+    <p>Valeur : ${nombre}</p>
+
+    <ul>
+    <% 
+       java.util.List produits = (java.util.List) request.getAttribute("produits");
+       for(Object p : produits) { 
+    %>
+       <li><%= p %></li>
+    <% } %>
+    </ul>
 </body>
 </html>
