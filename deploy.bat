@@ -2,7 +2,7 @@
 setlocal
 
 rem === Chemins ===
-set SRC=src\main\java\app
+set SRC=src\main\java
 set WEBAPP=src\main\webapp
 set RESOURCES=src\main\resources
 set OUT=build
