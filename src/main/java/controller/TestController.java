@@ -24,7 +24,6 @@ public class TestController {
         String message = "Voici une chose écrite par TestController. (Vita sprint 4)";
         return message;
     }
-
     @MyMapping(url = "/hello")
     public ModelView ouverturePage() {
         ModelView mv = new ModelView();
