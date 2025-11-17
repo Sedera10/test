@@ -33,4 +33,10 @@ public class TestController {
         mv.setView("hello.jsp");
         return mv;
     }
+
+    @MyMapping(path="/etudiant/{id}")
+    public String getEtudiant(int id) {
+        return "Étudiant demandé : " + id;
+    }
+
 }
