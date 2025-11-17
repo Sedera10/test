@@ -10,7 +10,7 @@ if not exist %OUT% mkdir %OUT%
 
 dir /b /s %SRC%\*.java > sources.txt
 
-javac -encoding UTF-8 -cp "%LIB%\*" -d "%OUT%" @sources.txt
+javac -parameters -encoding UTF-8 -cp "%LIB%\*" -d "%OUT%" @sources.txt
 
 if %errorlevel% neq 0 (
     echo ❌ Erreur de compilation.
