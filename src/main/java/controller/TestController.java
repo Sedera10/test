@@ -58,4 +58,5 @@ public class TestController {
     public String verif(@RequestParam("id") int ident, int id) {
         return "PATH id = " + id + " | REQUEST id = " + ident;
     }
+    //Cas 5 : RequestParam non obligatoire
 }
