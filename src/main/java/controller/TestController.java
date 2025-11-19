@@ -58,11 +58,4 @@ public class TestController {
     public String verif(@RequestParam("id") int ident, int id) {
         return "PATH id = " + id + " | REQUEST id = " + ident;
     }
-
-    // Cas 5 
-    @MyMapping(path="/classe/{id}")
-    public String etuClasse(int id, @RequestParam("niveau") int niveau) {
-        return "ID path = " + id + " | niveau param = " + niveau;
-    }
-
 }
