@@ -3,6 +3,7 @@ package controller;
 import myframework.annotation.MyMapping;
 import myframework.fw.ModelView;
 import myframework.annotation.MyController;
+import myframework.annotation.RequestParam;
 
 import java.util.List;
 
@@ -34,9 +35,34 @@ public class TestController {
         return mv;
     }
 
+    // Cas 1 
     @MyMapping(path="/etudiant/{id}")
     public String getEtudiant(int id) {
-        return "Étudiant demandé : " + id;
+        return "Étudiant avec path variable : " + id;
+    }
+
+    // Cas 2 : sans {..}
+    @MyMapping(url="/chercher")
+    public String chercher(@RequestParam("id") int ident) {
+        return "RequestParam ident = " + ident;
+    }
+
+    // Cas 3 : path variable + requestParam avec nom different 
+    @MyMapping(path="/classe/{id}")
+    public String etuClasse(int id, @RequestParam("niveau") int niveau) {
+        return "ID path = " + id + " | niveau param = " + niveau;
+    }
+
+    // Cas 4 : Path variable + RequestParam avec le même nom
+    @MyMapping(path="/verif/{id}")
+    public String verif(@RequestParam("id") int ident, int id) {
+        return "PATH id = " + id + " | REQUEST id = " + ident;
+    }
+
+    // Cas 5 
+    @MyMapping(path="/classe/{id}")
+    public String etuClasse(int id, @RequestParam("niveau") int niveau) {
+        return "ID path = " + id + " | niveau param = " + niveau;
     }
 
 }
