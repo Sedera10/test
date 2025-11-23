@@ -17,5 +17,17 @@
        <li><%= p %></li>
     <% } %>
     </ul>
+
+    <br>
+
+    <div>
+        <form action="chercher" method="post">
+            <label for="age">Age :</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
 </body>
 </html>

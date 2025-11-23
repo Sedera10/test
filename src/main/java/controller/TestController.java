@@ -34,7 +34,7 @@ public class TestController {
         mv.setView("hello.jsp");
         return mv;
     }
-
+    
     // Cas 1 
     @MyMapping(path="/etudiant/{id}")
     public String getEtudiant(int id) {
@@ -43,7 +43,7 @@ public class TestController {
 
     // Cas 2 : sans {..}
     @MyMapping(url="/chercher")
-    public String chercher(@RequestParam("id") int ident) {
+    public String chercher(@RequestParam("age") int ident) {
         return "RequestParam ident = " + ident;
     }
 
@@ -58,5 +58,9 @@ public class TestController {
     public String verif(@RequestParam("id") int ident, int id) {
         return "PATH id = " + id + " | REQUEST id = " + ident;
     }
-    //Cas 5 : RequestParam non obligatoire
+
+    @MyMapping(path="/classe/{id}/niveau/{niveau}")
+    public String etClasse(int id, @RequestParam("niveau") int niveau) {
+        return "ID path = " + id + " | niveau param = " + niveau;
+    }
 }
