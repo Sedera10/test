@@ -27,15 +27,6 @@ public class TestController {
         String message = "Voici une chose écrite par TestController. (Vita sprint 4)";
         return message;
     }
-    @MyMapping("/hello")
-    public ModelView ouverturePage() {
-        ModelView mv = new ModelView();
-        mv.addAttribute("message", "Finalisation du Sprint 5 framework Java ");
-        mv.addAttribute("nombre", 42);
-        mv.addAttribute("produits", List.of("PC", "Souris", "Clavier"));
-        mv.setView("hello.jsp");
-        return mv;
-    }
 
     // Cas 1 
     @MyMapping("/etudiant/{id}")
