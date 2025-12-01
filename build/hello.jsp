@@ -22,8 +22,8 @@
 
     <div>
         <form action="chercher" method="post">
-            <label for="age">Age :</label>
-            <input type="number" id="age" name="age" required>
+            <label for="age">Nom :</label>
+            <input type="text" id="age" name="nom" placeholder="entrer votre nom" required>
 
             <button type="submit">Envoyer</button>
         </form>
