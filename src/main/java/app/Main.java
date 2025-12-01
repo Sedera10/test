@@ -12,7 +12,7 @@ public class Main {
             if (method.isAnnotationPresent(MyMapping.class)) {
                 // On récupère la valeur de l'URL
                 MyMapping mapping = method.getAnnotation(MyMapping.class);
-                System.out.println("Méthode : " + method.getName() + " | URL = " + mapping.url());
+                System.out.println("Méthode : " + method.getName() + " | URL = " + mapping.value());
             }
         }
     }
