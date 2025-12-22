@@ -10,6 +10,7 @@
 
     <div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <form action="form/save" method="post">
 
             <!-- Champ texte -->
@@ -60,6 +61,8 @@
 
             <button type="submit">Envoyer</button>
 =======
+=======
+>>>>>>> Stashed changes
         <form action="employe/save" method="post">
 
             <label>Nom :</label>
@@ -104,6 +107,9 @@
             <input type="text" name="competences" value="SQL"><br><br>
 
             <button type="submit">Add +</button>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
         </form>
