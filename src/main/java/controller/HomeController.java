@@ -4,6 +4,7 @@ import myframework.annotation.MyMapping;
 import myframework.fw.ModelView;
 import myframework.annotation.GET;
 import myframework.annotation.POST;
+import myframework.annotation.Json;
 import myframework.annotation.MyController;
 import myframework.annotation.RequestParam;
 
@@ -12,14 +13,17 @@ import java.util.List;
 @MyController
 public class HomeController {
 
+    @Json
+    @POST
     @MyMapping("/form")
     public ModelView toForm() {
         ModelView mv = new ModelView();
-        mv.addAttribute("message", "Teste du Sprint 8 !");
+        mv.addAttribute("message", "Teste du Sprint 9 !");
         mv.setView("pages/form.jsp");
         return mv;
     }
 
+    @Json
     @MyMapping("/hello")
     public ModelView toHello() {
         ModelView mv = new ModelView();

@@ -4,8 +4,11 @@ import myframework.annotation.MyMapping;
 import myframework.fw.ModelView;
 import myframework.annotation.GET;
 import myframework.annotation.POST;
+import myframework.annotation.Json;
 import myframework.annotation.MyController;
 import myframework.annotation.RequestParam;
+
+import model.Employe;
 
 import java.util.List;
 
@@ -52,5 +55,14 @@ public class TestController {
     public String verif(@RequestParam("id") int ident, int id) {
         return "PATH id = " + id + " | REQUEST id = " + ident;
     }
-    //Cas 5 : RequestParam non obligatoire
+    
+    @Json
+    @MyMapping("/employes")
+    public List<Employe> getEmploye() {
+        Employe emp = new Employe("Naina", "Developpeur");
+        Employe emp2 = new Employe("Raja", "Manager");
+        List<Employe> emps = List.of(emp, emp2);
+        return emps;
+    }
+
 }
