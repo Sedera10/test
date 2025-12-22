@@ -14,6 +14,7 @@ import java.util.List;
 public class HomeController {
 
     @Json
+    @POST
     @MyMapping("/form")
     public ModelView toForm() {
         ModelView mv = new ModelView();
