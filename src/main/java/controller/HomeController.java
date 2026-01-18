@@ -43,6 +43,15 @@ public class HomeController {
         return mv;
     }
 
+    // teste Sprint 11 : go to Login page
+    @GET
+    @MyMapping("/login")
+    public ModelView loginForm() {
+        ModelView mv = new ModelView();
+        mv.setView("pages/login.jsp");
+        return mv;
+    }
+
     @POST
     @MyMapping("/upload")
     public ModelView uploadFile(Map<String, Object> formData, @RequestParam("titre") String titre) {
